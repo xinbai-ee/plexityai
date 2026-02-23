@@ -6,12 +6,13 @@
 # mimetypes: Guessing MIME types of files
 # uuid: Generating unique identifiers
 # curl_cffi: HTTP requests and multipart form data handling
+import json
+import mimetypes
+import random
 import re
 import sys
-import json
-import random
-import mimetypes
 from uuid import uuid4
+
 from curl_cffi import CurlMime, requests
 
 from .config import (
@@ -148,7 +149,14 @@ class Client:
                     "claude-4.5-sonnet",
                     "grok-4.1",
                 ],
-                "reasoning": [None, "gpt-5.2-thinking", "claude-4.5-sonnet-thinking", "gemini-3.0-pro", "kimi-k2-thinking", "grok-4.1-reasoning"],
+                "reasoning": [
+                    None,
+                    "gpt-5.2-thinking",
+                    "claude-4.5-sonnet-thinking",
+                    "gemini-3.0-pro",
+                    "kimi-k2-thinking",
+                    "grok-4.1-reasoning",
+                ],
                 "deep research": [None],
             }[mode]
             if self.own

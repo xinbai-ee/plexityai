@@ -14,6 +14,7 @@ from perplexity.config import (
     ENDPOINT_SSE_ASK,
     ENDPOINT_UPLOAD_URL,
 )
+
 from .emailnator import Emailnator
 
 
@@ -128,14 +129,21 @@ class Client(AsyncMixin):
             model
             in {
                 "auto": [None],
-                 "pro": [
+                "pro": [
                     None,
                     "sonar",
                     "gpt-5.2",
                     "claude-4.5-sonnet",
                     "grok-4.1",
                 ],
-                "reasoning": [None, "gpt-5.2-thinking", "claude-4.5-sonnet-thinking", "gemini-3.0-pro", "kimi-k2-thinking", "grok-4.1-reasoning"],
+                "reasoning": [
+                    None,
+                    "gpt-5.2-thinking",
+                    "claude-4.5-sonnet-thinking",
+                    "gemini-3.0-pro",
+                    "kimi-k2-thinking",
+                    "grok-4.1-reasoning",
+                ],
                 "deep research": [None],
                 "copilot": [None, "gemini-3.0-pro", "kimi-k2-thinking"],
             }[mode]
@@ -216,7 +224,7 @@ class Client(AsyncMixin):
                 "mode": "concise" if mode == "auto" else "copilot",
                 "model_preference": {
                     "auto": {None: "turbo"},
-                     "pro": {
+                    "pro": {
                         None: "pplx_pro",
                         "sonar": "experimental",
                         "gpt-5.2": "gpt52",
