@@ -31,7 +31,7 @@ This report captures every improvement that transformed Perplexity AI from a “
 
 ### 5. Packaging Configuration
 - Authored `pyproject.toml` with build metadata, optional dependency groups (`driver`, `dev`), and tool settings (pytest, black, isort, mypy).
-- Allows `pip install -e .` with Python 3.8+ and sets the stage for PyPI publishing.
+- Allows `pip install -e .` with Python 3.9+ and sets the stage for PyPI publishing.
 
 ### 6. Test Suite
 - Added `tests/` with targeted coverage for utilities, configuration, and exceptions.
@@ -43,7 +43,7 @@ This report captures every improvement that transformed Perplexity AI from a “
 
 ### 8. CI/CD Workflows
 - Added three GitHub Actions workflows:
-  - `test.yml`: multiplatform test matrix (Ubuntu/Windows/macOS, Python 3.8–3.12) with coverage upload.
+  - `test.yml`: multiplatform test matrix (Ubuntu/Windows/macOS, Python 3.9–3.12) with coverage upload.
   - `quality.yml`: black, isort, flake8, mypy, pylint, and bandit checks.
   - `publish.yml`: build and PyPI release pipeline.
 

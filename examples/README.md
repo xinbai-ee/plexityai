@@ -70,7 +70,7 @@ python examples/batch_processing.py
 Most examples work without any setup. Some advanced examples require:
 
 - **File Upload & Account Creation**: Perplexity account cookies
-- **Batch Processing**: Python 3.8+ with asyncio support
+- **Batch Processing**: Python 3.9+ with asyncio support
 
 ## Getting Cookies
 
